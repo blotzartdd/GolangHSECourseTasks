@@ -7,11 +7,11 @@ type Rectangle struct {
 	w int
 }
 
-func getArea(rect Rectangle) int {
+func (rect *Rectangle) getArea() int {
 	return rect.h * rect.w
 }
 
 func main() {
 	rect := Rectangle{5, 10}
-	fmt.Println(getArea(rect))
+	fmt.Println(rect.getArea())
 }
